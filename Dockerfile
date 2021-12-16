@@ -17,7 +17,7 @@ WORKDIR /go/src/sigs.k8s.io/descheduler
 COPY . .
 ARG ARCH
 ARG VERSION
-RUN VERSION=${VERSION} make build.$ARCH
+RUN VERSION=v0.22.0 make build.amd64
 
 FROM scratch
 
